@@ -45,6 +45,8 @@ app.use(mongoSanitize({
     replaceWith:'_'
 }))
 
+const secret = process.env.SECRET || 'thisshouldbebettersecret';
+
 // const store = new MongoStore({
 //     url: dbUrl,
 //     secret: 'thisshouldbebettersecret',
@@ -58,7 +60,7 @@ app.use(mongoSanitize({
 const sessionConfig = {
     // store,
     name:'session',
-    secret: 'thisshouldbebettersecret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
