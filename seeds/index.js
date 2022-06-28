@@ -19,11 +19,11 @@ db.once("open", () => {
 
 const seedDB = async()=>{
     await Campground.deleteMany({});
-    for(let i=0;i<500;i++){
+    for(let i=0;i<0;i++){
         const random1000 = Math.floor(Math.random()*1000);
         const price = Math.floor(Math.random()*20) + 10;
         const camp = new Campground({
-            author: "620d07151a7b46a723947b74",
+            author: "62a3854b1d1e7486b5a19840",
             location: `${cities[random1000].city},${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus delectus? Cum aspernatur, ut est nam eius maxime asperiores reiciendis facilis officia nemo maiores, voluptas eos accusamus, alias facere at?',
